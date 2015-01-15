@@ -1,0 +1,41 @@
+if [ "$TERM" != "dumb" ]; then
+	eval "`dircolors -b`"
+	alias ls='ls --color=auto'
+fi
+
+
+# some more ls aliases
+alias ll='ls -l --time-style=long-iso'
+alias lh='ll -h'
+alias la='ls -A'
+alias l='ls -CF'
+alias lld='ls -ld */'
+
+
+# Alias of common operations
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias mv='mv -i'
+alias cp='cp -i'
+alias df='df -h -x devtmpfs -x tmpfs -x rootfs'
+
+
+# I hope I don't repent on this. Open with the browser, or whatever nicely.
+alias o='xdg-open'
+alias doc='cd /usr/share/doc ; cd'
+
+
+# Use colors when grepping
+alias grep='grep --color=auto'
+alias clive='clive --format=best'
+alias apg='apg -m 18 -M sncl -s'
+
+
+# Save the command first, otherwise "su" might see "please" instead.
+alias please='last=`fc -ln -1`; \
+test -x /usr/bin/sudo && sudo -- $last || su -c "$last"'
+
+
+# vim: set filetype=sh:
