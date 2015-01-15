@@ -1,0 +1,9 @@
+[user]
+	name = Andres Di Giovanni
+	email = andresdigiovanni@gmail.com
+[core]
+	editor = gedit
+[include]
+	path = .gitconfig.extra
+[pull]
+	rebase = true
